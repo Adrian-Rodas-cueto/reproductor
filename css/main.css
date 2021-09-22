@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+}
+/* player */
+.player {
+  min-width: 320px;
+  background-image: linear-gradient(black, grey);
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px black;
+  padding: 2rem;
+  color: white;
+}
+/* titulo */
+.title {
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* cover */
+.cover {
+  border-radius: 1rem;
+  display: block;
+  margin: 0 auto 0 auto;
+  margin-bottom: 1rem;
+}
+
+/* barra de progreso */
+.barra {
+  height: .6rem;
+  background-color: grey;
+  margin-bottom: 1rem;
+}
+.barraProgreso {
+  width: 0;
+  height: 100%;
+  background-color: red;
+}
+
+/* controles */
+.control {
+  display: flex;
+  justify-content: space-evenly;
+}
+.control button {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 1rem;
+}
+.control i {
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+}
+/* canciones */
+.canciones {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.canciones li {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.canciones a {
+  text-decoration: none;
+  color: lightgrey;
+}
+.canciones a.activa{
+  font-weight: bold;
+  color: white;
+}

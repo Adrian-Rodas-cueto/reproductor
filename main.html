@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reproductor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Player -->
+    <main class="player">
+      <!-- Titulo -->
+      <h1 class="title" id="title"></h1>
+      <!-- cover -->
+      <img class="cover" id="cover" src="" alt="" />
+      <audio src="" id="audio"></audio>
+      <!-- barra de progreso -->
+      <div class="barra">
+        <section class="barraProgreso" id="barra"></section>
+      </div>
+      <!-- controles -->
+      <section class="control">
+        <button class="anterior" id="anterior">
+          <i class="fas fa-backward"></i>
+        </button>
+        
+        <button class="play" id="pause/play">
+          <i class="fas fa-play" id="play"></i>
+        </button>
+
+        <button class="siguiente" id="siguiente">
+          <i class="fas fa-forward"></i>
+        </button>
+      </section>
+      <!-- canciones -->
+      <ul class="canciones" id="canciones"></ul>
+    </main>
+  </body>
+</html>
