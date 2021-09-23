@@ -32,6 +32,7 @@ const play = document.getElementById("play")
 const siguiente = document.getElementById("siguiente")
 const anterior = document.getElementById("anterior")
 const barra = document.getElementById("barra")
+const barraPadre = document.getElementById("barraPadre")
 //cargar lista de canciones 
 function loaderlist () {
     lista.forEach((cancion, indice)=>{
@@ -54,6 +55,8 @@ function loaderlist () {
 }
 //capturar el progreso de la cancion
 audio.addEventListener("timeupdate", barraprogreso)
+//capturar el click de la barra 
+barraPadre.addEventListener("click", setprogress)
 //cargar cancion
 function cargar (indice) {
     if (marcador!=indice) {
@@ -134,6 +137,17 @@ function barraprogreso(event) {
    const {duration, currentTime} = event.srcElement
    barra.style.width = (currentTime*100/duration + "%")
 }
+//hacer la barra clicable
+function setprogress (event) {
+    const totalwidth = this.offsetWidth
+    const progreso = event.offsetX
+    audio.currentTime = (progreso*audio.duration/totalwidth)
+}
+// cambiar cancion al terminar 
+audio.addEventListener("ended", () =>{
+        next(marcador)
+    }
+)
 //correr
 loaderlist()
 //capturar los link
