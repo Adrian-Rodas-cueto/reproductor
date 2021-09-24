@@ -87,8 +87,8 @@ function claseActiva ( indice) {
 //pausar cancion
 pause.addEventListener("click", ()=>{
     if (pausar) {
-        play.classList.remove("fa-play")
-        play.classList.add("fa-pause")
+        play.classList.remove("fa-pause")
+        play.classList.add("fa-play")
         audio.pause()
         pausar = false
     }else if (audio.getAttribute("src")== '') {
@@ -97,8 +97,8 @@ pause.addEventListener("click", ()=>{
         play.classList.add("fa-pause")
     }
     else{
-        play.classList.remove("fa-pause")
-        play.classList.add("fa-play")
+        play.classList.remove("fa-play")
+        play.classList.add("fa-pause")
         audio.play()
         pausar = true
     }
